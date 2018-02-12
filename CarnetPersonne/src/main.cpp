@@ -15,5 +15,6 @@ using namespace std;
 int main()
 {
 	GestionnairePersonne cahierAppel;
+	cahierAppel.add();
 
 }
