@@ -5,7 +5,7 @@
  *      Author: Antoi
  */
 #include <iostream>
-#include <string>
+#include "Personnage.h"
 
 using namespace std;
 
@@ -24,17 +24,20 @@ int main()
     goliath.setNomArme("Couteau");
     goliath.setVie(50);
 
+    while(goliath.getVie() > 0 || david.getVie() > 0) {
 
-    goliath.attaquer(david);    //goliath attaque david
-    david.boirePotionDeVie(20); //david récupère 20 de vie en buvant une potion
-    goliath.attaquer(david);    //goliath réattaque david
-    david.attaquer(goliath);    //david contre-attaque
+		goliath.attaquer(david);    //goliath attaque david
+		david.boirePotionDeVie(20); //david récupère 20 de vie en buvant une potion
+		goliath.attaquer(david);    //goliath réattaque david
+		david.attaquer(goliath);    //david contre-attaque
 
-    goliath.changerArme("Double hache tranchante vénéneuse de la mort", 40);
-    goliath.attaquer(david);
-
+		goliath.changerArme("Double hache tranchante vénéneuse de la mort", 40);
+		goliath.attaquer(david);
+		goliath.estVivant();
+		david.estVivant();
+    }
 
     return 0;
-};
+}
 
 

@@ -1,4 +1,3 @@
-#ifndef DEF_PERSONNAGE
 #define DEF_PERSONNAGE
 
 #include <string>
@@ -12,6 +11,22 @@ class Personnage
     void boirePotionDeVie(int quantitePotion);
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
     bool estVivant();
+
+	int getDegatsArme() const;
+
+	void setDegatsArme(int degatsArme);
+
+	int getMana() const;
+
+	void setMana(int mana);
+
+	const std::string& getNomArme() const;
+
+	void setNomArme(const std::string& nomArme);
+
+	int getVie() const;
+
+	void setVie(int vie);
 
     private:
 
