@@ -10,7 +10,7 @@ class Personnage
     void attaquer(Personnage &cible);
     void boirePotionDeVie(int quantitePotion);
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
-    bool estVivant();
+    std::string estVivant();
 
 	int getDegatsArme() const;
 
@@ -28,10 +28,15 @@ class Personnage
 
 	void setVie(int vie);
 
+	const std::string& getNomPersonnage() const;
+
+	void setNomPersonnage(const std::string& nomPersonnage);
+
     private:
 
     int m_vie;
     int m_mana;
     std::string m_nomArme; //Pas de using namespace std, il faut donc mettrestd:: devant string
     int m_degatsArme;
+    std::string nomPersonnage;
 };

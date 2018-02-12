@@ -18,9 +18,19 @@ void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
     setDegatsArme(degatsNouvelleArme);
 }
 
-bool Personnage::estVivant()
+string Personnage::estVivant()
 {
-    return getVie() > 0;
+    if(getVie() > 0) {
+    	return getNomPersonnage() + " est encore en vie";
+    }
+    return getNomPersonnage() + " est mort";
+}
+const std::string& Personnage::getNomPersonnage() const {
+	return nomPersonnage;
+}
+
+void Personnage::setNomPersonnage(const std::string& nomPersonnage) {
+	this->nomPersonnage = nomPersonnage;
 }
 int Personnage::getDegatsArme() const {
 	return m_degatsArme;

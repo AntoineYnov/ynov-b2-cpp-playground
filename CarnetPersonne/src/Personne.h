@@ -12,36 +12,24 @@ class Personne {
 
 private:
 	string nom;
-    string prenom;
+	string prenom;
     int age;
 
 public:
 	Personne();
 	virtual ~Personne();
 
-	int getAge() const {
-		return age;
-	}
+	int getAge() const;
 
-	void setAge(int age) {
-		this->age = age;
-	}
+	void setAge(int age);
 
-	const string& getNom() const {
-		return nom;
-	}
+	const string& getNom() const;
 
-	void setNom(const string& nom) {
-		this->nom = nom;
-	}
+	void setNom(const string& nom);
 
-	const string& getPrenom() const {
-		return prenom;
-	}
+	const string& getPrenom() const;
 
-	void setPrenom(const string& prenom) {
-		this->prenom = prenom;
-	}
+	void setPrenom(const string& prenom);
 };
 
 

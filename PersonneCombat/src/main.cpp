@@ -14,17 +14,19 @@ int main()
     //Création de 2 objets de type Personnage : david et goliath
     Personnage david, goliath;
 
+    david.setNomPersonnage("David");
     david.setDegatsArme(20);
     david.setNomArme("Hache");
     david.setMana(40);
     david.setVie(200);
 
+    goliath.setNomPersonnage("Goliath");
     goliath.setDegatsArme(10);
     goliath.setMana(30);
     goliath.setNomArme("Couteau");
     goliath.setVie(50);
 
-    while(goliath.getVie() > 0 || david.getVie() > 0) {
+    while(goliath.getVie() >= 0 || david.getVie() >= 0) {
 
 		goliath.attaquer(david);    //goliath attaque david
 		david.boirePotionDeVie(20); //david récupère 20 de vie en buvant une potion
@@ -33,8 +35,8 @@ int main()
 
 		goliath.changerArme("Double hache tranchante vénéneuse de la mort", 40);
 		goliath.attaquer(david);
-		goliath.estVivant();
-		david.estVivant();
+		cout << david.estVivant() << endl;
+		cout << goliath.estVivant() << endl;
     }
 
     return 0;
