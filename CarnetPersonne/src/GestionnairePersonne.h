@@ -6,17 +6,15 @@
  */
 #ifndef GESTIONNAIREPERSONNE_H_
 #define GESTIONNAIREPERSONNE_H_
-
+#include "vector"
 #include "GestionnairePersonne.h"
 
 #include "Personne.h"
 
 class GestionnairePersonne {
 private:
-//	std::vector<Personne> listPersonne(20);
+	std::vector<Personne> listPersonne;
 public:
-	GestionnairePersonne();
-	virtual ~GestionnairePersonne();
 	void add();
 };
 

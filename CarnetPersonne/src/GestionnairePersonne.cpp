@@ -7,14 +7,6 @@
 
 #include "GestionnairePersonne.h"
 
-GestionnairePersonne::GestionnairePersonne() {
-	// TODO Auto-generated constructor stub
-
-}
-
-GestionnairePersonne::~GestionnairePersonne() {
-	// TODO Auto-generated destructor stub
-}
 
 void GestionnairePersonne::add(){
 
@@ -31,4 +23,7 @@ void GestionnairePersonne::add(){
 	jeremy.setNomPersonnage("Nunes");
 	jeremy.setPrenomPersonnage("Jeremy");
 	jeremy.setAge(22);
+	listPersonne.push_back(antoine);
+	listPersonne.push_back(david);
+	listPersonne.push_back(jeremy);
 }
