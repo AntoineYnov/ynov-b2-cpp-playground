@@ -7,13 +7,7 @@
 #include "Personne.h"
 
 using namespace std;
-Personne::Personne() {
-	// TODO Auto-generated constructor stub
-}
 
-Personne::~Personne() {
-	// TODO Auto-generated destructor stub
-}
 int Personne::getAge() const {
 	return age;
 }
@@ -22,18 +16,18 @@ void Personne::setAge(int age) {
 	this->age = age;
 }
 
-const string& Personne::getNom() const {
-	return nom;
+const std::string& Personne::getNomPersonnage() const {
+	return nomPersonnage;
 }
 
-void Personne::setNom(const string& nom) {
-	this->nom = nom;
+void Personne::setNomPersonnage(const std::string& nomPersonnage) {
+	this->nomPersonnage = nomPersonnage;
 }
 
-const string& Personne::getPrenom() const {
-	return prenom;
+const std::string& Personne::getPrenomPersonnage() const {
+	return prenomPersonnage;
 }
 
-void Personne::setPrenom(const string& prenom) {
-	this->prenom = prenom;
+void Personne::setPrenomPersonnage(const std::string& prenomPersonnage) {
+	this->prenomPersonnage = prenomPersonnage;
 }

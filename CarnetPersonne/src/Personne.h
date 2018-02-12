@@ -9,27 +9,21 @@
 #define PERSONNE_H_
 
 class Personne {
-
-private:
-	string nom;
-	string prenom;
-    int age;
-
 public:
-	Personne();
-	virtual ~Personne();
-
 	int getAge() const;
 
 	void setAge(int age);
 
-	const string& getNom() const;
+	void setNomPersonnage(const std::string& nomPersonnage);
+	const std::string& getNomPersonnage() const;
 
-	void setNom(const string& nom);
+	void setPrenomPersonnage(const std::string& prenomPersonnage);
+	const std::string& getPrenomPersonnage() const;
 
-	const string& getPrenom() const;
-
-	void setPrenom(const string& prenom);
+private:
+	std::string nomPersonnage;
+	std::string prenomPersonnage;
+    int age;
 };
 
 

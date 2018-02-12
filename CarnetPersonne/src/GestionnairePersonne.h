@@ -7,9 +7,10 @@
 #ifndef GESTIONNAIREPERSONNE_H_
 #define GESTIONNAIREPERSONNE_H_
 
-#include "Personne.h"
 #include <iostream>
 
+#include "GestionnairePersonne.h"
+#include "Personne.h"
 class GestionnairePersonne {
 private:
 	Personne tabPersonne[];
@@ -18,22 +19,22 @@ public:
 	virtual ~GestionnairePersonne();
 
 	const Personne*& getTabPersonne() const {
-		return tabPersonne;
+//		return tabPersonne;
 	}
 	void add(){
 
 		Personne david,antoine,jeremy;
 
-		antoine.setNom("Genouin-Duhamel");
-		antoine.setPrenom("Antoine");
+		antoine.setNomPersonnage("Genouin-Duhamel");
+		antoine.setPrenomPersonnage("Antoine");
 		antoine.setAge(20);
 
-		david.setNom("Genouin-Duhamel");
-		david.setPrenom("David");
+		david.setNomPersonnage("Genouin-Duhamel");
+		david.setPrenomPersonnage("David");
 		david.setAge(15);
 
-		jeremy.setNom("Nunes");
-		jeremy.setPrenom("Jeremy");
+		jeremy.setNomPersonnage("Nunes");
+		jeremy.setPrenomPersonnage("Jeremy");
 		jeremy.setAge(22);
 	}
 };
