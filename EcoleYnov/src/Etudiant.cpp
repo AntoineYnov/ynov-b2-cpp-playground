@@ -18,19 +18,20 @@ Etudiant::Etudiant() {
 Etudiant::~Etudiant() {
 	// TODO Auto-generated destructor stub
 }
-float* Etudiant::setListeNote(float listeNote){
-	this->listeNote = listeNote;
-}
 void Etudiant::saisie(){
 	int note ;
 
 	            cout << "Donner le nom :" ;
 
-	            cin >> nom ;
+	            cin >> nom;
+
+	            setNom(nom);
 
 	            cout << "Donner le prénom :" ;
 
-	            cin >> prenom ;
+	            cin >> prenom;
+
+	            setPrenom(prenom);
 
 	            cout << "Saisie des notes \n" ;
 
@@ -40,18 +41,17 @@ void Etudiant::saisie(){
 
 	                        cout << "Donner la note N°" << note<< " : " ;
 
-	                        cin >>  setListeNote(note);
-
+	                        cin >>  listeNote[note];
 	            }
 
 }
 
 void Etudiant::afficher (){
 	if (admis() == 1) {
-		cout << "Vous êtes admis !" << endl;
+		cout << getNom() << " " << getPrenom() <<" Vous êtes admis !" << endl;
 	}
 	else {
-		cout << "Vous n'êtes pas admis !" << endl;
+		cout << getNom() << " " << getPrenom() <<" Vous n'êtes pas admis !" << endl;
 	}
 }
 int Etudiant::admis (){
@@ -59,9 +59,6 @@ int Etudiant::admis (){
 		return 1;
 	}
 		return 0;
-}
-const float Etudiant::getListeNote() const {
-	return listeNote;
 }
 
 const std::string& Etudiant::getNom() const {
@@ -81,8 +78,9 @@ void Etudiant::setPrenom(const std::string& prenom) {
 }
 float Etudiant::moyenne (){
 	float somme;
-	for (auto &note : getListeNote()){
-		somme += getListeNote(&note);
-	}
+	int note;
+    for (note = 0 ; note < 10 ; note++) {
+    	somme += listeNote[note];
+    }
 	return (somme/10);
 }

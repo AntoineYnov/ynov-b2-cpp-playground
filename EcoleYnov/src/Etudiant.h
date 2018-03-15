@@ -14,8 +14,8 @@ class Etudiant {
 private:
 	std::string nom;
 	std::string prenom;
+public:
 	float listeNote[];
-protected:
 	Etudiant();
 	virtual ~Etudiant();
 
@@ -23,16 +23,15 @@ protected:
 	void saisie ();
 	float moyenne ();
 	int admis ();
-	float* setListeNote(float listeNote);
-	const float* Etudiant::getListeNote() const;
 
-	const std::string& Etudiant::getNom() const;
 
-	void Etudiant::setNom(const std::string& nom);
+	const std::string& getNom() const;
 
-	const std::string& Etudiant::getPrenom() const;
+	void setNom(const std::string& nom);
 
-	void Etudiant::setPrenom(const std::string& prenom);
+	const std::string& getPrenom() const;
+
+	void setPrenom(const std::string& prenom);
 };
 
 #endif /* ETUDIANT_H_ */
